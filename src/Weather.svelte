@@ -9,6 +9,7 @@
   let icon;
   let incomeData = null;
   let celcius = false;
+  let loading = true;
 
   const setPosition = position => {
     let lat = position.coords.latitude;
@@ -18,6 +19,7 @@
         `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${appid_openweather}`
       )
       .then(data => {
+        loading = false;
         //VARIABLE FOR DATA FROM API
         incomeData = data.data;
 
@@ -92,15 +94,20 @@
   }
 </style>
 
-<i class={icon} />
+{#if loading}
+  <i class="fas fa-hourglass-half" />
+{:else}
 
-<h1>{desc}</h1>
+  <i class={icon} />
 
-<h2
-  on:click={() => {
-    celcius = !celcius;
-  }}>
-  {celcius ? `${temp}  ` : Math.round((temp * 9) / 5 + 32)} &deg {celcius ? 'C' : 'F'}
-</h2>
+  <h1>{desc}</h1>
 
-<h3>{location}</h3>
+  <h2
+    on:click={() => {
+      celcius = !celcius;
+    }}>
+    {celcius ? `${temp}  ` : Math.round((temp * 9) / 5 + 32)} &deg {celcius ? 'C' : 'F'}
+  </h2>
+
+  <h3>{location}</h3>
+{/if}
