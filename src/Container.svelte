@@ -11,11 +11,11 @@
 </script>
 
 <div class="container">
-
+  <!--WEATHER-->
   <div class="bg1">
     <Weather />
   </div>
-
+  <!--TIME-->
   <div on:click={switchClock} class="bg1">
     {#if analog}
       <Analog />

@@ -8,7 +8,8 @@
   const week = ["S", "M", "T", "W", "T", "F", "S"];
   let beforeToday = week.slice(0, day);
   let today = week[day];
-  let afterToday = week.slice(day, week.length);
+  let afterToday =
+    day < 1 ? week.slice(day + 1, week.length) : week.slice(day, week.length);
 </script>
 
 <style>
