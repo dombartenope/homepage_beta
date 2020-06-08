@@ -14,5 +14,11 @@
   });
 </script>
 
+<style>
+  * {
+    cursor: pointer;
+  }
+</style>
+
 <h1>{date}</h1>
 <h3>{dayNight}</h3>

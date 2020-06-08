@@ -12,78 +12,27 @@
 
 <div class="container">
   <!--WEATHER-->
-  <div class="bg1">
+  <div id="weather" class="bg1">
     <Weather />
   </div>
   <!--TIME-->
-  <div on:click={switchClock} class="bg1">
+  <div id="time" on:click={switchClock} class="bg1">
     {#if analog}
       <Analog />
     {:else}
       <Digital />
     {/if}
   </div>
-
-  <div class="bg2">
-    <h2>
-      <i class="fas fa-running" />
-    </h2>
-    <p>Miles</p>
-  </div>
-
-  <div class="bg1">Test</div>
-
-  <div class="bg1">
-    <h2>
-      <i class="fas fa-bed" />
-    </h2>
-    <p>Sleep Keep</p>
-  </div>
-
-  <div class="bg2">
+  <!-- DATE -->
+  <div id="date" class="bg2">
     <Date />
   </div>
 
-  <div class="bg1">
-    <h2>
-      170
-      <span>lbs</span>
-    </h2>
-    <p>Weight</p>
-  </div>
+  <div class="bg1" />
+  <div class="bg1" />
 
-  <div class="bg1">
-    <h2>
-      28
-      <span>%</span>
-    </h2>
-    <p>Fat Percentage</p>
-  </div>
+  <div id="todo" class="bg2">TODO LIST</div>
 
-  <div class="bg2">
-    <h2>
-      118
-      <span>mgdl</span>
-    </h2>
-    <p>Blood Glucose</p>
-  </div>
-
-  <div class="bg2">
-    <h2>
-      680
-      <span>kcal</span>
-    </h2>
-    <p>AVG Consumption</p>
-  </div>
-
-  <div class="bg2">TEST</div>
-
-  <div class="bg2">
-    <h2>
-      85
-      <span>%</span>
-    </h2>
-    <p>Body Hydration</p>
-  </div>
-
+  <!-- TODO: add two more bg2 divs -->
+  <!-- TODO: add two long bg1 divs under todo list for "todo" and "complete" -->
 </div>
