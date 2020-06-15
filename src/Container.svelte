@@ -4,6 +4,8 @@
   import Digital from "./Digital.svelte";
   import Date from "./Date.svelte";
   import Focus from "./Focus.svelte";
+  import Todo from "./Todo.svelte";
+  import Links from "./Links.svelte";
 
   let clicked = false;
   let analog = true;
@@ -81,12 +83,18 @@
   <div id="date" class="bg2">
     <Date />
   </div>
-
+  <!-- FOCUS -->
   <div id="focus" class="bg1">
     <Focus {focus} />
   </div>
-
-  <div id="todo" class="bg2">TODO LIST</div>
+  <!-- TODO LIST -->
+  <div id="todo" class="bg2">
+    <Todo />
+  </div>
+  <!-- TBD -->
+  <div id="link" class="bg1">
+    <Links />
+  </div>
 
   <!-- TODO: add two more bg2 divs -->
   <!-- TODO: add two long bg1 divs under todo list for "todo" and "complete" -->

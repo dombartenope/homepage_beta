@@ -27,12 +27,12 @@ p {
 .container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 	grid-gap: 10px;
-	max-width: 2fr;
 }
 
 .container > div {
-	height: 300px;
+	min-height: 250px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -43,17 +43,20 @@ p {
 }
 
 .container > div:hover {
-	opacity: 0.8;
-	transform: scale(0.98);
+	box-shadow: inset 2px -1px 20px 3px black;
 }
 
 #weather {
 	grid-column: span 2;
 }
-#todo {
+#focus {
 	grid-column: span 2;
 }
-#focus {
+#todo {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+#link {
 	grid-column: span 2;
 }
 
