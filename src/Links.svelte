@@ -17,6 +17,16 @@
 </script>
 
 <style>
+  .next,
+  .prev {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+
   .imgContainer {
     display: flex;
     align-items: center;
@@ -38,13 +48,16 @@
 </style>
 
 <div class="imgContainer">
-
-  <i on:click={showPrev} id="prevBtn" class="fas fa-chevron-left" />
+  <div on:click={showPrev} id="prevBtn" class="prev">
+    <i class="fas fa-chevron-left" />
+  </div>
 
   <a href="{links[image]}.com">
     <img class="img" src="{links[image]}.svg" alt="" />
   </a>
 
-  <i on:click={showNext} id="nextBtn" class="fas fa-chevron-right" />
+  <div on:click={showNext} id="nextBtn" class="next">
+    <i class="fas fa-chevron-right" />
+  </div>
 
 </div>
