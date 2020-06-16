@@ -39,6 +39,14 @@ p {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(auto-fit, 1fr);
 	}
+
+	.focus::placeholder {
+		font-size: 20px;
+	}
+
+	#todo {
+		padding-bottom: 5px;
+	}
 }
 
 .container > div {
