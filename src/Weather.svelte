@@ -16,7 +16,7 @@
     let lon = position.coords.longitude;
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${appid_openweather}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${appid_openweather}`
       )
       .then(data => {
         loading = false;

@@ -25,6 +25,7 @@
     justify-content: center;
     width: 50px;
     height: 50px;
+    cursor: pointer;
   }
 
   .imgContainer {
@@ -52,7 +53,7 @@
     <i class="fas fa-chevron-left" />
   </div>
 
-  <a href="{links[image]}.com">
+  <a href="https://www.{links[image]}.com">
     <img class="img" src="{links[image]}.svg" alt="" />
   </a>
 
