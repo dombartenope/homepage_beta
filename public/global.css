@@ -44,7 +44,7 @@ p {
 		font-size: 20px;
 	}
 
-	#todo {
+	.container > div {
 		padding-bottom: 5px;
 	}
 }
