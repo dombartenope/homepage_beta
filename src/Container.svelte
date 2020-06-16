@@ -8,7 +8,7 @@
   import Links from "./Links.svelte";
 
   let clicked = false;
-  let analog = true;
+  let analog = false;
   let input;
   let focus;
 
