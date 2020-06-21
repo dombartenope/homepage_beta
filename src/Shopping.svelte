@@ -47,10 +47,17 @@
     width: 80%;
   }
 
+  @media only screen and (max-width: 740px) {
+    li {
+      font-size: 1rem;
+    }
+  }
+
   li {
+    font-size: 1.5em;
     list-style: none;
     margin-left: 20px;
-    max-width: 70%;
+    max-width: 90%;
     text-overflow: clip;
   }
 
@@ -66,7 +73,7 @@
   }
 
   .done span {
-    opacity: 0.4;
+    opacity: 0.6;
   }
 </style>
 
@@ -86,7 +93,7 @@
   <ul>
     {#each items as item}
       <li class:done={item.done}>
-        <input type="checkbox" bind:checked={item.done} />
+        <input id="check" type="checkbox" bind:checked={item.done} />
         <span>{item.name}</span>
         <button on:click={() => removeItem(item)}>❌</button>
       </li>

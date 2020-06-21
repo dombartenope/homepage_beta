@@ -1,6 +1,6 @@
 <script>
   let image = 0;
-  const links = ["google", "youtube", "reddit"];
+  const links = ["google", "youtube", "reddit", "github"];
 
   const showPrev = () => {
     image--;

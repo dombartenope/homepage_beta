@@ -48,6 +48,7 @@
   }
   .focus::placeholder {
     text-align: center;
+    color: aliceblue;
   }
   .focus:focus {
     outline: none;
@@ -92,7 +93,7 @@
     <Shopping />
   </div>
   <!-- TBD -->
-  <div id="link" class="bg1">
+  <div id="link" class="bg2">
     <Links />
   </div>
 
