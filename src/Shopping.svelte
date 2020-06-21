@@ -43,8 +43,15 @@
   }
 
   #name {
+    margin-top: 10px;
+    font-size: 1.5em;
     border-radius: 4px;
     width: 80%;
+    height: 2em;
+  }
+
+  h1 {
+    margin-bottom: 10px;
   }
 
   @media only screen and (max-width: 740px) {
