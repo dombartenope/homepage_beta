@@ -31,18 +31,33 @@
 </script>
 
 <style>
+  .shopping-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-add {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
   #name {
     border-radius: 4px;
+    width: 80%;
   }
 
   li {
     list-style: none;
+    margin-left: 20px;
+    max-width: 70%;
+    text-overflow: clip;
   }
 
   li button {
     border: none;
     background: transparent;
-    padding: 0;
+    padding: 1em;
     margin: 0;
   }
 
@@ -55,17 +70,19 @@
   }
 </style>
 
-<div>
-  <h1>
-    Shopping List
-    <i class="fa fa-clipboard-list" />
-  </h1>
+<div class="shopping-list">
+  <div class="item-add">
+    <h1>
+      Shopping List
+      <i class="fa fa-clipboard-list" />
+    </h1>
 
-  <form on:submit|preventDefault={addItem} autocomplete="off">
-    <label for="name">Add an item</label>
-    <br />
-    <input id="name" type="text" bind:value={name} />
-  </form>
+    <form on:submit|preventDefault={addItem} autocomplete="off">
+      <label for="name">Add an item</label>
+      <br />
+      <input id="name" type="text" bind:value={name} />
+    </form>
+  </div>
   <ul>
     {#each items as item}
       <li class:done={item.done}>

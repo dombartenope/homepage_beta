@@ -88,7 +88,7 @@
     <Focus {focus} />
   </div>
   <!-- TODO LIST -->
-  <div id="todo" class="bg2">
+  <div id="shopping" class="bg2">
     <Shopping />
   </div>
   <!-- TBD -->
@@ -96,6 +96,4 @@
     <Links />
   </div>
 
-  <!-- TODO: add two more bg2 divs -->
-  <!-- TODO: add two long bg1 divs under todo list for "todo" and "complete" -->
 </div>
