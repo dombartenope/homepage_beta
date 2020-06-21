@@ -4,7 +4,7 @@
   import Digital from "./Digital.svelte";
   import Date from "./Date.svelte";
   import Focus from "./Focus.svelte";
-  import Todo from "./Todo.svelte";
+  import Shopping from "./Shopping.svelte";
   import Links from "./Links.svelte";
 
   let clicked = false;
@@ -89,7 +89,7 @@
   </div>
   <!-- TODO LIST -->
   <div id="todo" class="bg2">
-    <Todo />
+    <Shopping />
   </div>
   <!-- TBD -->
   <div id="link" class="bg1">

@@ -18,6 +18,11 @@
   * {
     cursor: pointer;
   }
+  @media only screen and (max-width: 740px) {
+    h1 {
+      font-size: 1em;
+    }
+  }
 </style>
 
 <h1>{date}</h1>

@@ -32,16 +32,17 @@
     font-size: 3em;
   }
 
-  input {
+  .input {
+    margin: auto;
     width: 20em;
     font-size: 1em;
     font-weight: bold;
     font-family: Poiret One;
-    border-radius: 4px;
+    border-radius: 10px;
     height: 40px;
   }
 
-  input::placeholder {
+  .input::placeholder {
     text-align: center;
   }
 
@@ -64,9 +65,10 @@
   }
 
   li {
-    text-align: center;
+    text-align: left;
     font-size: 2em;
     list-style: none;
+    text-overflow: clip;
   }
 </style>
 
@@ -79,19 +81,15 @@
       </span>
     </h1>
     <form style="justify-content: center" on:submit|preventDefault={addTodo}>
-      <div class="control">
-        <input
-          bind:value={input}
-          class="input"
-          type="text"
-          placeholder="TODO" />
 
-        <button>
-          <span>
-            <i class="fas fa-plus" />
-          </span>
-        </button>
-      </div>
+      <input bind:value={input} class="input" type="text" placeholder="TODO" />
+
+      <button>
+        <span>
+          <i class="fas fa-plus" />
+        </span>
+      </button>
+
     </form>
     <ul class:list={todos.length > 0}>
       {#each todos as todo (todo.id)}

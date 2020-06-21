@@ -62,8 +62,8 @@
   <h1>{focus}</h1>
 {:else}
   <h1>Focus</h1>
-  <div class="spinner">
-    <div class="dot1" />
-    <div class="dot2" />
-  </div>
 {/if}
+<div class="spinner">
+  <div class="dot1" />
+  <div class="dot2" />
+</div>
