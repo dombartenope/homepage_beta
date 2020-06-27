@@ -27,6 +27,7 @@
       items = [];
     }
   };
+
   getItems();
 </script>
 
