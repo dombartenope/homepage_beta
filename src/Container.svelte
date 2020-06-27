@@ -15,7 +15,14 @@
   const handleInput = e => {
     focus = input;
     input = "";
+    let str = JSON.stringify(focus);
+    localStorage.setItem("focus", str);
   };
+
+  const storedFocus = localStorage.getItem("focus", focus);
+  if (storedFocus) {
+    focus = JSON.parse(storedFocus);
+  }
 
   const switchClock = () => {
     analog = !analog;
@@ -32,6 +39,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+  }
+
+  footer {
+    height: 4em;
+    width: 100%;
   }
 
   .focus {
@@ -96,5 +108,4 @@
   <div id="link" class="bg2">
     <Links />
   </div>
-
 </div>
