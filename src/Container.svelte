@@ -41,11 +41,6 @@
     justify-content: center;
   }
 
-  footer {
-    height: 4em;
-    width: 100%;
-  }
-
   .focus {
     padding: 10px;
     caret-color: rgb(209, 193, 193);
