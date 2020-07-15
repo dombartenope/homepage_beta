@@ -8,8 +8,13 @@
   let temp;
   let icon;
   let incomeData = null;
-  let celcius = false;
   let loading = true;
+  let celcius;
+  if (JSON.parse(localStorage.getItem("celcius", celcius)) === false) {
+    celcius = false;
+  } else {
+    celcius = true;
+  }
 
   const setPosition = position => {
     let lat = position.coords.latitude;
@@ -105,6 +110,8 @@
   <h2
     on:click={() => {
       celcius = !celcius;
+      let str = JSON.stringify(celcius);
+      localStorage.setItem('celcius', str);
     }}>
     {celcius ? `${temp}  ` : Math.round((temp * 9) / 5 + 32)} &deg {celcius ? 'C' : 'F'}
   </h2>

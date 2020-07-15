@@ -1,18 +1,39 @@
 <script>
+  import { onMount } from "svelte";
+
   import Weather from "./Weather.svelte";
   import Analog from "./Analog.svelte";
   import Digital from "./Digital.svelte";
   import Date from "./Date.svelte";
   import Focus from "./Focus.svelte";
   import Shopping from "./Shopping.svelte";
+  import Todo from "./Todo.svelte";
   import Links from "./Links.svelte";
 
-  let clicked = false;
-  let analog = false;
+  let analog;
+  if (JSON.parse(localStorage.getItem("analog", analog)) === false) {
+    analog = false;
+  } else {
+    analog = true;
+  }
+
+  let todo;
+  if (JSON.parse(localStorage.getItem("Todo Active", todo)) === false) {
+    todo = false;
+  } else {
+    todo = true;
+  }
+
   let input;
   let focus;
 
-  const handleInput = e => {
+  const handleList = () => {
+    todo = !todo;
+    let str = JSON.stringify(todo);
+    localStorage.setItem("Todo Active", str);
+  };
+
+  const handleInput = () => {
     focus = input;
     input = "";
     let str = JSON.stringify(focus);
@@ -26,6 +47,8 @@
 
   const switchClock = () => {
     analog = !analog;
+    let str = JSON.stringify(analog);
+    localStorage.setItem("analog", str);
   };
 </script>
 
@@ -59,6 +82,20 @@
   }
   .focus:focus {
     outline: none;
+  }
+
+  .toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 4em;
+  }
+
+  .fa {
+    width: 20px;
+    height: 20px;
   }
 </style>
 
@@ -97,7 +134,19 @@
   </div>
   <!-- TODO LIST -->
   <div id="shopping" class="bg2">
-    <Shopping />
+    {#if !todo}
+      <div on:click={handleList} class="toggle">
+        <i class="fa fa-toggle-off" aria-hidden="true" />
+        <small>Switch</small>
+      </div>
+      <Shopping />
+    {:else}
+      <div on:click={handleList} class="toggle">
+        <i class="fa fa-toggle-on" aria-hidden="true" />
+        <small>Switch</small>
+      </div>
+      <Todo />
+    {/if}
   </div>
   <!-- TBD -->
   <div id="link" class="bg2">
