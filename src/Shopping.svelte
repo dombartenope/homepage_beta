@@ -82,6 +82,7 @@
 
   .done span {
     opacity: 0.6;
+    text-decoration: line-through;
   }
 </style>
 
