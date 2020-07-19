@@ -30,7 +30,7 @@ p {
 	grid-template-rows: repeat(auto-fit, 1fr);
 	grid-gap: 10px;
 	width: 100vw;
-	height: 92vh;
+	height: 93vh;
 	user-select: none;
 }
 
