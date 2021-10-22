@@ -1,8 +1,6 @@
 <script>
   import axios from "axios";
 
-  const appid_openweather = "f6923f26d68be71d33e9ab8f527562e3";
-
   let location;
   let desc;
   let temp;
@@ -21,7 +19,8 @@
     let lon = position.coords.longitude;
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=${appid_openweather}`
+        //Using proxy server hosted on heroku in order to hide public facing appid
+        `https://proxy-server-for-homepage.herokuapp.com/api/?lat=${lat}&lon=${lon}`
       )
       .then(data => {
         loading = false;
